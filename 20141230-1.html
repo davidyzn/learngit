@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title></title>
+<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<h3>例子</h3>
+<p title="选择你最喜欢的水果.">你最喜欢的水果是？</p>
+<ul>
+<li id="ok">苹果</li>
+<li id="jquery_ok">橘子</li>
+<li>菠萝</li>
+</ul>
+</body>
+<script>
+//用javascript的方法取元素
+var domObj=document.getElementById("ok");
+var ObjHTML=domObj.innerHTML;
+//alert(ObjHTML);
+</script>
+<script>
+//用jquery的方法取元素
+//alert($("#jquery_ok").html());
+var $var_jquery=$("#jquery_ok");
+//alert(($var_jquery).html());
+//将jquery对象转换成dom对象
+var var_dom=$var_jquery[0];
+//alert(var_dom.innerHTML);
+var var_dom2=$var_jquery.get(0);
+//alert(var_dom2.innerHTML);
+//将dom对象转换成jquery对象
+var $var_jquery2=$(var_dom2);
+//alert($var_jquery.html());
+
+</script>
+<!--继续尝试jquery对象和dom对象的互换-->
+<input type="checkbox" id="checkbox01"/><label for="cr">我已经阅读了上面制度.</label>
+<script>
+$(document).ready(function(){
+   var $var_jquery3=$("#checkbox01");
+   var var_dom3=$var_jquery3[0];
+   $var_jquery3.click(function(){
+      if(var_dom3.checked){
+	     alert("感谢您的支持！您可以继续操作！");
+		 }
+		})
+		})
+$(document).ready(function(){
+   var $var_jquery4=$("#checkbox01");
+   $var_jquery4.click(function(){
+   if($var_jquery4.is(":checked")){
+   alert("感谢你支持jquery！你可以继续操作！");
+   }
+   })
+   })
+  
+</script>
+
+
+</html>
