@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <title></title>
 <script src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="stylesheets/style1.css" type="text/css"/>
 </head>
 <div class=”one" id="one">
 id 为one，class 为one 的div
@@ -19,7 +20,7 @@ id 为one，class 为one 的div
  <div class="mini">class为mini</div>
  <div class="mini">class为mini</div>
  <div class="mini">class为mini</div>
- <div class="mini"></div>
+ <div class="mini">ok</div>
  </div>
  <div class="one">
  <div class="mini">class 为mini</div>
@@ -33,6 +34,45 @@ id 为one，class 为one 的div
  包含input的type为"hidden"的div<input type="hidden" size="8"/>
  </div>
  <span id="mover">正在执行动画的span元素</span>
+ <script>
+ $('.mini').css("background","#aab");
+ $('#two').css("background","#fff");
+ $('div').css("margin","20px");
+ $('*').css("background","#bbffaa");
+ $('body div').css("background","#fff");
+ $('.one+div').css("background","#aab");
+ $('#two~div').css("background","#bbffaa");
+ $('#two~div').css("margin","30px");
+ $('div:first').css("background","#5c3317");
+ $('div:last').css("bakcground","#ff7f00");
+ $('div:not(.one)').css("background","#3232cd");
+ $('div:even').css("background","#ff7f00");
+ $('div:odd').css("background","#bbffaa");
+ $('div:eq(3)').css("background","#aab");
+ $('div:gt(3)').css("background","#ff7f00");
+ $('div:lt(3)').css("background","#5c3317");
+ $(':header').css("background","#bbffaa");
+ $(':animated').css("background","#5c3317");
+ $(':contains(input)').css("background","#fff");
+ $('div:empty').css("margin","10px");
+ $('div[title]').css("background","#3232cd");
+ $("div[id][title*=es]").css("background","#bc1717");
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </script>
 </html>
