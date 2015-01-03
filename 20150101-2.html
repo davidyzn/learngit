@@ -8,11 +8,12 @@
 <link rel="stylesheet" href="stylesheets/style1.css" type="text/css"/>
 </head>
 <body>
+.div{ margin:0px;background:#fff;}
 <form id="form1" action="#">
  可用元素:<input name="add" value="可用文本框"/> <br/>
- 不可用元素：<input name="email" disabled="disabled" value="不可用文本框“/><br/>
+ 不可用元素：<input name="email" disabled="disabled" value="不可用文本框" /> <br/>
  可用元素：<input name="che" value="可用文本框" /><br/>
- 不可用元素：<input name="name" disable="disabled" value="不可用文本框"/><br/>
+ 不可用元素：<input name="name" disabled="disabled" value="不可用文本框"/><br/>
  <br/>
  多选框:<br/>
  <input type="checkbox" name="newsletter" checked="checked"
@@ -43,6 +44,36 @@
  </select>
  <div></div>
  </form>
+ <script>
+ $("#form1 input:enabled").val("这里变化了");
+ $("#form1 input:disabled").val("不可变的也变化了");
+ $("#input:checked").length;
+ $("#select:selected").text();
+ </script>
+ <br />
+ <div>
+ <form id="form2" action="#>
+ <input type="button" value="Button" /><br/>
+ <input type="checkbox" name="c" />1
+ <input type="checkbox" name="c" />2
+ <input type="checkbox" name="c" />3 <br/>
+ <input type="file" /><br />
+ <input type="hidden" /><div style="display:none">test</div><br />
+ <input type="image" /><br />
+ <input type="password" /><br/>
+ <input type="radio" name="a" />1<input type="radio" name="a"/>2<br />
+ <input type="reset" /><br />
+ <input type="submit" value="提交"/><br />
+ <input type="text" /><br />
+ <select><option>Option</option></select><br/>
+ <textarea></textarea><br />
+ <button>Button</button><br />
+ </form>
+ </div>
+ <script>
+ $("#form2 :input").length;
+ $("#form2 :text").length;
+ </script>
 </body>
 
 </html>
