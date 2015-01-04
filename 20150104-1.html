@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title></title>
+<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<!--
+<body>
+<p title="选择你最喜欢的水果。">你最喜欢的水果是？</p>
+<ul>
+   <li title='苹果'>苹果</li>
+   <li title='橘子'>橘子</li>
+   <li title='菠萝'>菠萝</li>
+ </ul>
+<script>
+var $body=$("body").children();
+var $p=$("p").children();
+var $ul=$("ul").children();
+alert($body.length);
+alert($p.length);
+alert($ul.length);
+for(var i=0,len=$ul.length;i<len;i++){
+alert($ul[i].innerHTML);
+}
+var $p1=$("p").next();
+alert($p1.innerHTML);
+</script>
+-->
+<p><a href="#" class="tooltip" title="这是我的超链接提示1.">提示1.</a></p>
+<p><a href="#" class="tooltip" title="这是我的超链接提示2.">提示2.</a></p>
+<p><a href="#" title="这是自带提示 1.">自带提示1.</a></p>
+<p><a href="#" title="这是自带提示 2.">自带提示2.</a></p>
+
+<script>
+$("a.tooltip").mouseover(function(){
+//显示title
+var tooltip="<div id='tooltip'>"+this.title+"</div>";
+$("body").append(tooltip);
+$("#tooltip")
+.css({
+"top":e.pageY+"px",
+"left":e.pageX+"px"
+}).show("fast");
+}).mouseout(function(){
+$("#tooltip").remove();
+//隐藏title
+});
+})
+</html>
