@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title></title>
+<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div id="panel">
+  <h5 class="head">什么是jQuery？</h5>
+  <div class="content">
+  jquery是一个优秀的javascript框架
+  </div>
+</div>
+<script>
+/*
+$(function(){
+   $("#panel h5.head").bind("click",function(){
+    var $content=$(this).next();
+   if($content.is(":visible")){
+      $content.hide();
+   }else{
+      $content.show();
+   }
+   })
+   })
+
+ $(function(){
+   $("#panel h5.head").bind("mouseover",function(){
+      $(this).next().show();
+	  }).bind("mouseout".function(){
+	  $(this).next().hide();
+	  })
+	  })
+*/	  
+$(function(){
+  $("#panel h5.head").bind("mouseover",function(){
+     $(this).next().show();
+	 }).bind("mouseout",function(){
+	 $(this).next().hide();
+	 })
+	 })
+ </script> 
+</body>
+
+
+
+
+</html>
