@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title></title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+#panel{
+    position:relative;
+	width:100px;
+	height:100px;
+	border:1px solid #005000;
+	background:#96e555;
+	cursor:pointer;
+	}
+</style>
+</head>
+<body>
+
+<div id="panel"
+</div>
+<script>
+/*
+$(function(){
+   $("#panel").click(function(){
+   $(this).animate({left:"+=500px"},3000);
+   $(this).animate({height:"200px"},3000);
+   });
+   });
+   */
+ $(function(){
+   $("#panel").css("opacity","0.5");
+   $("#panel").click(function(){
+   $(this).animate({left:"400px",height:"200px",opactiy:"1"},3000)
+   .animate({top:"200px",width:"200px"},3000,function(){
+   $(this).css("border","50px solid blue");
+   })
+  // .fadeOut("slow");
+   })
+   })
+   
+</script>
+</body>
+</html>
